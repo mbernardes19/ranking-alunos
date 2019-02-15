@@ -46,7 +46,7 @@ fetch('/api/projs')
         console.log(pts);
         let proj = createNode('p');
         proj.className="projs";
-        proj.innerHTML = `${projs[i].proj}`;
+        proj.innerHTML = 'Projetos entregues:'+`${projs[i].proj}`;
         append(pts,proj);
     }
 });
