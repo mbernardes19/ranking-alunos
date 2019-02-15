@@ -37,4 +37,30 @@ fetch('/api/pts')
     }
 });
 
+fetch('/api/projs')
+.then((response) => response.json())
+.then(data => {
+    let projs = data;
+    for (i=0; i < 3; i++) {
+        let pts = document.getElementById(`${i.toString()}`+'-proj');
+        console.log(pts);
+        let proj = createNode('p');
+        proj.className="projs";
+        proj.innerHTML = `${projs[i].proj}`;
+        append(pts,proj);
+    }
+});
 
+fetch('/api/weeks')
+.then((response) => response.json())
+.then(data => {
+    let numeros = data;
+    for (i=0; i < 3; i++) {
+        let pts = document.getElementById(`${i.toString()}`+'-num');
+        console.log(pts);
+        let num = createNode('p');
+        num.className="numb";
+        num.innerHTML = `${numeros[i].ptsTotais}`;
+        append(pts,num);
+    }
+});

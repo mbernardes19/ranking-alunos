@@ -39,6 +39,10 @@ app.get('/api/pts',(req,res)=>{
     getPtsAlunos(connection,req,res);
 })
 
+app.get('/api/projs',(req,res)=>{
+    getPtsProjs(connection,req,res);
+})
+
 function getNomeAlunos(conn,req,res){
     conn.query('SELECT nome FROM Aluno WHERE Nome IS NOT NULL;',(error,results,fields)=>{
         if(error){
@@ -59,5 +63,14 @@ function getPtsAlunos(conn,req,res){
     })
 };
 
+function getPtsProjs(conn,req,res){
+    conn.query('SELECT proj FROM Aluno WHERE proj IS NOT NULL;',(error,results,fields)=>{
+        if(error){
+            return res.json(error);
+        } else {
+            res.json(results);
+        }
+    })
+};
 
 app.listen(PORT,()=>{console.log(`Rodando na porta ${PORT}!`)});
