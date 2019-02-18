@@ -8,33 +8,102 @@
     <link rel='stylesheet' type="text/css" href="/style.css">
 </head>
 <body>
+    <br/>
+    <div id="container2"></div>
+
+<div id='container'>
+    <br/>
     <h1>Ranking Pioneers</h1>
     <div class="position" id="0">
         <div class='img' id="0-img"></div>
         <div class='nome' id="0-nome"></div>
-        <div class='projs' id="0-proj"></div>
-        <div class='weeks' id="0-week"></div>
+        <div class='center'>
+            <div class='projs' id="0-proj"></div>
+            <div class='weeks' id="0-week"></div>
+        </div>
         <div class='num' id="0-num"></div>
+        <div class='medal-row' id="0-mrow">
+              
+            </div> 
         
     </div>
     
     <div class="position" id="1">
         <div class='img' id="1-img"></div>
         <div class='nome' id="1-nome"></div>
-        <div class='projs' id="1-proj"></div>
-        <div class='weeks' id="1-week"></div>
+        <div class='center'>
+            <div class='projs' id="1-proj"></div>
+            <div class='weeks' id="1-week"></div>
+        </div>
         <div class='num' id="1-num"></div>
+        <div class='medal-row' id="1-mrow">
+           
+        </div>   
     </div>
 
     <div class="position" id="2">
         <div class='img' id="2-img"></div>
         <div class='nome' id="2-nome"></div>
-        <div class='projs' id="2-proj"></div>
-        <div class='weeks' id="2-week"></div>
+        <div class='center'>
+            <div class='projs' id="2-proj"></div>
+            <div class='weeks' id="2-week"></div>
+        </div>
         <div class='num' id="2-num"></div>
+        <div class='medal-row' id="2-mrow">
+               
+            </div> 
     </div>
 
     <div id="name-space"></div>
-    <script src="/index.js" type='module'></script>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+
+
+    <form class='form' action="/api/projeto" method='POST'>
+        <fieldset>
+            <legend>Projeto</legend>
+        <label>Nome do Aluno</label><br/>
+        <select name="nome">
+            <option value='1'>Pedro</option>
+            <option value='2'>Breno</option>
+            <option value='3'>Felipe</option>
+        </select><br/>
+        <label>Nº do Projeto</label>
+        <input type='number' id='projNum' name='proj'><br/>
+        <input type='radio' value='20' name='pts'>Em dia
+        <input type='radio' value='10' name='pts'>Com atraso
+        <input type='radio' value='0' name='pts'>Não entregue<br/>
+        <button type='submit'>Entregar Projeto</button>
+    </fieldset>
+    </form>
+
+    <form class='form' action="/api/weekly" method='POST'>
+        <fieldset>
+        <legend>Weekly Challenge</legend>
+        <label>Nome do Aluno</label><br/>
+        <select name="nome">
+            <option value='1'>Pedro</option>
+            <option value='2'>Breno</option>
+            <option value='3'>Felipe</option>
+        </select><br/>
+        <label>Nº do Projeto</label>
+        <input id="projNum" type='number' name='proj'><br/>
+        <input type='radio' value='20' name='pts'>Em dia
+        <input type='radio' value='10' name='pts'>Com atraso
+        <input type='radio' value='0' name='pts'>Não entregue<br/>
+        <button type='submit'>Entregar Weekly Challenge</button>
+    </fieldset>
+    </form>  
+</div>
+<script src="/index.js" type='module'></script>
 </body>
 </html>

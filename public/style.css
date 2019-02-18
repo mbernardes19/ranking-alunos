@@ -1,10 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+h1{
+    text-align:center;
+    font-size:55px;
+}
+
+body{
+    background-color:rgb(36, 53, 99);
+    margin:0;
+    background-image: url('video2.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
 .position{
     width:400px;
-    height:100px;
-    background-color:blue;
+    height:150px;
+    background-color:#0a65ce;
     margin-top:20px;
+    margin-left: auto;
+    margin-right:auto;
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     border-radius:40px;
 }
 
@@ -12,18 +35,24 @@
     padding:8px 5px 10px 10px ;
     position:relative;
     right:140px;
+    left:10px;
     color:white;
     font-size:20px;
-    margin-left:50px;
+    margin-left:4px;
+    z-index:2;
+    font-weight: bold;
+    height:10px;
 }
 
 .num{
-    background-color:rgb(21, 30, 110);
-    border-radius:80px;
-    width:50px;
-    height:50px;
+    background-color:#084891;
+    border-radius:50%;
+    width:180px;
+    height:80px;
     text-align:center;
     margin:10px;
+    position: relative;
+    left:00px;
 
 }
 
@@ -33,22 +62,208 @@
 
 .numb{
     color:white;
-    margin: 13px auto;
+    margin: 20px 10px;
+    font-size:30px;
 }
 
 .img{
-    background-color:rgb(21, 30, 110);
-    border-radius:80px;
+   border-radius:80px;
     width:80px;
     height:80px;
     text-align:center;
     margin-top:10px;
     margin-left:10px;
-    background-image: url('0.jpg');
     background-size:cover;
 }
 
 .projs{
     color:white;
     width: 140px;
+    height:20px;
+    margin: 10px 0px 0px 0px;
+    font-size:14px;
+    position: relative;
+}
+
+.weeks{
+    color:white;
+    width: 140px;
+    height:20px;
+    margin: 0px 0px 0px 0px;
+    font-size:14px;
+    position: relative;
+}
+
+.center{
+    position:relative;
+    right:100px;
+    left:-46px;
+    margin: 30px 0px 0px 0px;
+    z-index:1;
+    width:300px;
+}
+
+.medal{
+    display:inline-block;
+    width: 22px;
+}
+
+.medal-row{
+    width:0px;
+    height:20px;
+    position:relative;
+    top:110px;
+    right:280px;
+    display:inline-flex;
+    z-index:0;
+}
+
+img{
+    display:inline-block;
+    margin-right:10px;
+
+}
+
+#container{
+    margin: 0 auto;
+    width:580px;
+    height:1000px;  
+    position: absolute;
+    z-index:-1;
+    left:20px;
+    padding-left:30px;
+}
+
+#container2{
+    margin: 0 auto;
+    width:580px;
+    height:2000px;
+    background-color:white;  
+    filter:opacity(0.8);
+    position: absolute;
+    z-index:-2;
+    left:30px;
+    padding-left:30px;
+}
+
+
+
+  @media only screen and (min-width: 760px) {
+    #container {
+      width:680px;
+      left:35px;
+
+    }
+    #container2{
+        width:680px;
+        left:45px;
+    }
+  }
+
+  @media only screen and (max-width: 635px) {
+    #container {
+      width:480px;
+      left:10px;
+    }
+    #container2{
+        width:480px;
+      left:25px;
+    }
+  }
+  
+  @media only screen and (min-width: 900px) {
+    #container {
+      width:800px;
+      left:35px;
+
+    }
+    #container2{
+        width:800px;
+        left:45px;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    #container {
+      width:900px;
+      left:35px;
+
+    }
+    #container2{
+        width:900px;
+        left:45px;
+    }
+  }
+
+  @media only screen and (min-width: 1100px) {
+    #container {
+      width:1000px;
+      left:35px;
+
+    }
+    #container2{
+        width:1000px;
+        left:45px;
+    }
+  }
+
+  @media only screen and (min-width: 1180px) {
+    #container {
+      width:1000px;
+      left:85px;
+
+    }
+    #container2{
+        width:1000px;
+        left:95px;
+    }
+  }
+
+.form{
+    display:inline-block;
+    margin:50px 50px;
+    text-align: center;
+}
+
+form label{
+    display: inline-block;
+    margin: 5px auto;
+}
+
+form select{
+    display: inline-block;
+    margin: 5px auto;
+}
+
+form input{
+    display: inline-block;
+    margin: 5px auto;
+}
+
+#projNum{
+    width:40px;
+}
+
+form button{
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 20px;
+    border:0;
+    padding:10px;
+    background-color: rgb(24, 117, 224);
+    color:white;
+}
+    
+
+
+
+fieldset{
+    width:350px;
+    border-radius: 200px;
+    border-color:#0a65ce;
+}
+
+legend{
+    font-weight: bold;
+    font-size:30px;
 }
